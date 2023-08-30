@@ -223,8 +223,8 @@ const Page = () => {
                 >
                 </Stack>
               </Stack>
-              <div>
-                  <TfiReload/>
+              <div className={"flex justify-between items-center w-56 "}>
+                  <TfiReload width={60}/>
                 <Button
                   variant="contained"
                 >

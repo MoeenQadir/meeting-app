@@ -77,7 +77,9 @@ export const CompanyCard = (props) => {
                         display="inline"
                         variant="body2"
                     >
+                        <div className={"flex justify-between w-28 items-center"}>
                         Join Meetings <FiExternalLink/>
+                        </div>
                     </Typography>
                 </Stack>
             </Stack>

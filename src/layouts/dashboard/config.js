@@ -7,6 +7,9 @@ import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import { SvgIcon } from '@mui/material';
+import {MdOutlineForwardToInbox} from "react-icons/md";
+import {GrGroup} from "react-icons/gr";
+import {TbUsersGroup} from "react-icons/tb";
 
 export const items = [
   // {
@@ -23,7 +26,7 @@ export const items = [
     path: '/',
     icon: (
       <SvgIcon fontSize="small">
-        <UsersIcon />
+          <MdOutlineForwardToInbox/>
       </SvgIcon>
     )
   },
@@ -32,7 +35,7 @@ export const items = [
     path: '/meetings',
     icon: (
       <SvgIcon fontSize="small">
-        <ShoppingBagIcon />
+        <TbUsersGroup color="white" className={"bg-white text-white"}/>
       </SvgIcon>
     )
   },
