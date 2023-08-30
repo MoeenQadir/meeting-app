@@ -12,7 +12,7 @@
 ## Demo
 
 - [Dashboard Page](https://material-kit-react.devias.io)
-- [Companies Page](https://material-kit-react.devias.io/companies)
+- [Companies Page](https://material-kit-react.devias.io/meetings)
 - [Customers Page](https://material-kit-react.devias.io/customers)
 - [Account Page](https://material-kit-react.devias.io/account)
 - [Settings Page](https://material-kit-react.devias.io/settings)
@@ -82,9 +82,9 @@ material-kit-react
 		├── _app.js
 		├── _document.js
 		├── account.js
-		├── companies.js
-		├── customers.js
+		├── meetings.js
 		├── index.js
+		├── dashboard.js
 		├── products.js
 		└── settings.js
 		└──  auth

@@ -14,9 +14,8 @@ import {
 } from '@mui/material';
 import { Layout as DashboardLayout } from 'src/layouts/dashboard/layout';
 import { CompanyCard } from 'src/sections/companies/company-card';
-import { CompaniesSearch } from 'src/sections/companies/companies-search';
 
-const companies = [
+const meetings = [
   {
     id: '2569ce0d517a7f06d3ea1f24',
     createdAt: '27/03/2019',
@@ -71,7 +70,7 @@ const Page = () => (
   <>
     <Head>
       <title>
-        Companies | Devias Kit
+        Meetings | Email Meetings
       </title>
     </Head>
     <Box
@@ -90,54 +89,28 @@ const Page = () => (
           >
             <Stack spacing={1}>
               <Typography variant="h4">
-                Companies
+                Meetings
               </Typography>
               <Stack
                 alignItems="center"
                 direction="row"
                 spacing={1}
               >
-                <Button
-                  color="inherit"
-                  startIcon={(
-                    <SvgIcon fontSize="small">
-                      <ArrowUpOnSquareIcon />
-                    </SvgIcon>
-                  )}
-                >
-                  Import
-                </Button>
-                <Button
-                  color="inherit"
-                  startIcon={(
-                    <SvgIcon fontSize="small">
-                      <ArrowDownOnSquareIcon />
-                    </SvgIcon>
-                  )}
-                >
-                  Export
-                </Button>
               </Stack>
             </Stack>
             <div>
               <Button
-                startIcon={(
-                  <SvgIcon fontSize="small">
-                    <PlusIcon />
-                  </SvgIcon>
-                )}
                 variant="contained"
               >
-                Add
+                Schedule Meetings
               </Button>
             </div>
           </Stack>
-          <CompaniesSearch />
           <Grid
             container
             spacing={3}
           >
-            {companies.map((company) => (
+            {meetings.map((company) => (
               <Grid
                 xs={12}
                 md={6}
