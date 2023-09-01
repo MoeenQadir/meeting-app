@@ -54,7 +54,7 @@ const data = [
     }
 ];
 const EmailDetail = ({ emailData }) => (
-    <div>
+    <>
         <Box
             component="main"
             sx={{
@@ -94,7 +94,7 @@ const EmailDetail = ({ emailData }) => (
                 </Stack>
             </Container>
         </Box>
-    </div>
+    </>
 );
 
 export async function getServerSideProps({ params }) {

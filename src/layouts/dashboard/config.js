@@ -22,7 +22,7 @@ export const items = [
   //   )
   // },
   {
-    title: 'Inbox',
+    title: 'Dashboard',
     path: '/',
     icon: (
       <SvgIcon fontSize="small">
@@ -39,24 +39,24 @@ export const items = [
       </SvgIcon>
     )
   },
-  // {
-  //   title: 'Account',
-  //   path: '/account',
-  //   icon: (
-  //     <SvgIcon fontSize="small">
-  //       <UserIcon />
-  //     </SvgIcon>
-  //   )
-  // },
-  // {
-  //   title: 'Settings',
-  //   path: '/settings',
-  //   icon: (
-  //     <SvgIcon fontSize="small">
-  //       <CogIcon />
-  //     </SvgIcon>
-  //   )
-  // },
+  {
+    title: 'Profile',
+    path: '/account',
+    icon: (
+      <SvgIcon fontSize="small">
+        <UserIcon />
+      </SvgIcon>
+    )
+  },
+  {
+    title: 'Settings',
+    path: '/settings',
+    icon: (
+      <SvgIcon fontSize="small">
+        <CogIcon />
+      </SvgIcon>
+    )
+  }
   // {
   //   title: 'Login',
   //   path: '/auth/login',
