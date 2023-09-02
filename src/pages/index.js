@@ -10,146 +10,54 @@ import {TfiReload} from "react-icons/tfi";
 const now = new Date();
 
 const data = [
-  {
-    id: '5e887ac47eed253091be10cb',
-    address: {
-      city: 'Cleveland',
-      country: 'USA',
-      state: 'Ohio',
-      street: '2849 Fulton Street'
+    {
+        id: '5e887b209c2dac3dd497f6db5',
+        avatar: '/assets/avatars/avatar-fran-perez.png',
+        createdAt: subDays(subHours(now, 1), 2).getTime(),
+        content: 'Meeting regarding Q3 financials at 2 PM on Wed, Sep 15, 2023',
+        name: 'Moon Darrin',
+        phone: '304-428-3097',
     },
-    avatar: '/assets/avatars/avatar-carson-darrin.png',
-    createdAt: subDays(subHours(now, 7), 1).getTime(),
-    email: 'carson.darrin@devias.io',
-    name: 'Carson Darrin',
-    phone: '304-428-3097'
-  },
-  {
-    id: '5e887b209c28ac3dd97f6db5',
-    address: {
-      city: 'Atlanta',
-      country: 'USA',
-      state: 'Georgia',
-      street: '1865  Pleasant Hill Road'
+    {
+        id: '5e887b209c2dac3dd497f6db6',
+        avatar: '/assets/avatars/avatar-jane-doe.png',
+        createdAt: subDays(subHours(now, 3), 5).getTime(),
+        content: 'Lunch appointment with a client at 12:30 PM on Thu, Sep 10, 2023',
+        name: 'Jane Doe',
+        phone: '555-123-4567',
     },
-    avatar: '/assets/avatars/avatar-fran-perez.png',
-    createdAt: subDays(subHours(now, 1), 2).getTime(),
-    email: 'fran.perez@devias.io',
-    name: 'Fran Perez',
-    phone: '712-351-5711'
-  },
-  {
-    id: '5e887b7602bdbc4dbb234b27',
-    address: {
-      city: 'North Canton',
-      country: 'USA',
-      state: 'Ohio',
-      street: '4894  Lakeland Park Drive'
+    {
+        id: '5e887b209c2dac3dd497f6db7',
+        avatar: '/assets/avatars/avatar-john-smith.png',
+        createdAt: subDays(subHours(now, 6), 10).getTime(),
+        content: 'Conference call with the marketing team at 4 PM on Mon, Sep 5, 2023',
+        name: 'John Smith',
+        phone: '123-456-7890',
     },
-    avatar: '/assets/avatars/avatar-jie-yan-song.png',
-    createdAt: subDays(subHours(now, 4), 2).getTime(),
-    email: 'jie.yan.song@devias.io',
-    name: 'Jie Yan Song',
-    phone: '770-635-2682'
-  },
-  {
-    id: '5e86809283e28b96d2d38537',
-    address: {
-      city: 'Madrid',
-      country: 'Spain',
-      name: 'Anika Visser',
-      street: '4158  Hedge Street'
+    {
+        id: '5e887b209c2dac3dd497f6db8',
+        avatar: '/assets/avatars/avatar-susan-davis.png',
+        createdAt: subDays(subHours(now, 2), 4).getTime(),
+        content: 'Project status update meeting at 9 AM on Tue, Sep 13, 2023',
+        name: 'Susan Davis',
+        phone: '789-456-1230',
     },
-    avatar: '/assets/avatars/avatar-anika-visser.png',
-    createdAt: subDays(subHours(now, 11), 2).getTime(),
-    email: 'anika.visser@devias.io',
-    name: 'Anika Visser',
-    phone: '908-691-3242'
-  },
-  {
-    id: '5e86805e2bafd54f66cc95c3',
-    address: {
-      city: 'San Diego',
-      country: 'USA',
-      state: 'California',
-      street: '75247'
+    {
+        id: '5e887b209c2dac3dd497f6db9',
+        avatar: '/assets/avatars/avatar-mark-wilson.png',
+        createdAt: subDays(subHours(now, 5), 8).getTime(),
+        content: 'Training session for new employees at 3 PM on Fri, Sep 8, 2023',
+        name: 'Mark Wilson',
+        phone: '555-789-1234',
     },
-    avatar: '/assets/avatars/avatar-miron-vitold.png',
-    createdAt: subDays(subHours(now, 7), 3).getTime(),
-    email: 'miron.vitold@devias.io',
-    name: 'Miron Vitold',
-    phone: '972-333-4106'
-  },
-  {
-    id: '5e887a1fbefd7938eea9c981',
-    address: {
-      city: 'Berkeley',
-      country: 'USA',
-      state: 'California',
-      street: '317 Angus Road'
-    },
-    avatar: '/assets/avatars/avatar-penjani-inyene.png',
-    createdAt: subDays(subHours(now, 5), 4).getTime(),
-    email: 'penjani.inyene@devias.io',
-    name: 'Penjani Inyene',
-    phone: '858-602-3409'
-  },
-  {
-    id: '5e887d0b3d090c1b8f162003',
-    address: {
-      city: 'Carson City',
-      country: 'USA',
-      state: 'Nevada',
-      street: '2188  Armbrester Drive'
-    },
-    avatar: '/assets/avatars/avatar-omar-darboe.png',
-    createdAt: subDays(subHours(now, 15), 4).getTime(),
-    email: 'omar.darobe@devias.io',
-    name: 'Omar Darobe',
-    phone: '415-907-2647'
-  },
-  {
-    id: '5e88792be2d4cfb4bf0971d9',
-    address: {
-      city: 'Los Angeles',
-      country: 'USA',
-      state: 'California',
-      street: '1798  Hickory Ridge Drive'
-    },
-    avatar: '/assets/avatars/avatar-siegbert-gottfried.png',
-    createdAt: subDays(subHours(now, 2), 5).getTime(),
-    email: 'siegbert.gottfried@devias.io',
-    name: 'Siegbert Gottfried',
-    phone: '702-661-1654'
-  },
-  {
-    id: '5e8877da9a65442b11551975',
-    address: {
-      city: 'Murray',
-      country: 'USA',
-      state: 'Utah',
-      street: '3934  Wildrose Lane'
-    },
-    avatar: '/assets/avatars/avatar-iulia-albu.png',
-    createdAt: subDays(subHours(now, 8), 6).getTime(),
-    email: 'iulia.albu@devias.io',
-    name: 'Iulia Albu',
-    phone: '313-812-8947'
-  },
-  {
-    id: '5e8680e60cba5019c5ca6fda',
-    address: {
-      city: 'Salt Lake City',
-      country: 'USA',
-      state: 'Utah',
-      street: '368 Lamberts Branch Road'
-    },
-    avatar: '/assets/avatars/avatar-nasimiyu-danai.png',
-    createdAt: subDays(subHours(now, 1), 9).getTime(),
-    email: 'nasimiyu.danai@devias.io',
-    name: 'Nasimiyu Danai',
-    phone: '801-301-7894'
-  }
+    {
+        id: '5e887b209c2dac3dd497f6db5',
+        avatar: '/assets/avatars/avatar-fran-perez.png',
+        createdAt: subDays(subHours(now, 1), 2).getTime(),
+        content: 'Updated invitation: Augier CEO Meeting @ Fri Sep 1, 2023 10pm - 10:30pm (PKT) - 10:30pm (PKT)  ',
+        name: 'Moon Darrin',
+        phone: '304-428-3097'
+    }
 ];
 
 const useCustomers = (page, rowsPerPage) => {
