@@ -3,12 +3,25 @@ import {Box, Button, Card, Container, Grid, Stack} from "@mui/material";
 import {LoadingButton} from "@mui/lab";
 import EmailAnimation from "../components/EmailAnimation";
 import {useRouter} from "next/navigation";
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Page = () => {
+
     const router = useRouter();
     const handleClick = () => {
+
         router.push('/');
+      toast.success('Connected successfully', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
     }
     return (
         <>
@@ -43,10 +56,12 @@ const Page = () => {
                                         Connect Email Account
                                     </LoadingButton>
                                 </Stack>
+
                             </Card>
                         </Grid>
                     </Grid>
                 </Container>
+              <ToastContainer />
             </Box>
         </>
     )
