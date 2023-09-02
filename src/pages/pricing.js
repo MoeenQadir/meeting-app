@@ -2,14 +2,10 @@ import React from 'react';
 import {Layout as DashboardLayout} from "../layouts/dashboard/layout";
 import {
     Box,
-    Card,
-    CardContent,
     Container,
     Stack,
     Typography
 } from "@mui/material";
-import {BsCalendar} from "react-icons/bs";
-import Switch from '@material-ui/core/Switch';
 
 
 const Pricing = () => {
