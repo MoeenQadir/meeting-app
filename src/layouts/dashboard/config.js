@@ -66,7 +66,16 @@ export const items = [
         <CogIcon />
       </SvgIcon>
     )
-  }
+  },
+    {
+        title: 'Pricing',
+        path: '/pricing',
+        icon: (
+            <SvgIcon fontSize="small">
+                <CogIcon />
+            </SvgIcon>
+        )
+    }
 
   // {
   //   title: 'Login',

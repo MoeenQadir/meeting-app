@@ -19,6 +19,7 @@ import { AccountPopover } from './account-popover';
 import CogIcon from "@heroicons/react/24/solid/CogIcon";
 import {FaQuestionCircle} from "react-icons/fa";
 import {AiOutlineQuestionCircle} from "react-icons/ai";
+import Link from "next/link";
 
 const SIDE_NAV_WIDTH = 280;
 const TOP_NAV_HEIGHT = 64;
@@ -68,31 +69,28 @@ export const TopNav = (props) => {
                                 </SvgIcon>
                             </IconButton>
                         )}
-                        <Tooltip title="Search">
-                            <IconButton>
-                                <SvgIcon fontSize="small">
-                                    <MagnifyingGlassIcon />
-                                </SvgIcon>
-                            </IconButton>
-                        </Tooltip>
                     </Stack>
                     <Stack
                         alignItems="center"
                         direction="row"
                         spacing={2}
                     >
-                        <Tooltip title="Contacts">
+                        <Link href="/settings">
+                        <Tooltip title="Settings">
                             <IconButton>
                                 <SvgIcon fontSize="small">
                                         <CogIcon />
                                 </SvgIcon>
                             </IconButton>
                         </Tooltip>
-                        <Tooltip title="Notifications">
+                        </Link>
+                        <Link href="/faqs">
+                        <Tooltip title="FAQ">
                             <IconButton>
                                     <AiOutlineQuestionCircle/>
                             </IconButton>
                         </Tooltip>
+                        </Link>
                         <Avatar
                             onClick={accountPopover.handleOpen}
                             ref={accountPopover.anchorRef}
