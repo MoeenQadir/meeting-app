@@ -55,6 +55,7 @@ export const Layout = withAuthGuard((props) => {
       <LayoutRoot>
         <LayoutContainer>
           {children}
+
         </LayoutContainer>
       </LayoutRoot>
     </>
