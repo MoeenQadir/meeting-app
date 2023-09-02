@@ -10,6 +10,7 @@ import { SvgIcon } from '@mui/material';
 import {MdOutlineForwardToInbox} from "react-icons/md";
 import {GrGroup} from "react-icons/gr";
 import {TbUsersGroup} from "react-icons/tb";
+import {AiOutlineQuestionCircle} from "react-icons/ai";
 
 export const items = [
   // {
@@ -48,6 +49,15 @@ export const items = [
       </SvgIcon>
     )
   },
+    {
+        title: 'FAQ',
+        path: '/faqs',
+        icon: (
+            <SvgIcon fontSize="small">
+                <AiOutlineQuestionCircle/>
+            </SvgIcon>
+        )
+    },
   {
     title: 'Settings',
     path: '/settings',
@@ -57,6 +67,7 @@ export const items = [
       </SvgIcon>
     )
   }
+
   // {
   //   title: 'Login',
   //   path: '/auth/login',
