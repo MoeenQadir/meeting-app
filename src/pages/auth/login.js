@@ -94,7 +94,8 @@ const Page = () => {
             maxWidth: 550,
             px: 3,
             py: '30px',
-            width: '100%',
+            width: '23rem',
+              height: 'full',
             backgroundColor: '#4267cf'
           }}
         >
@@ -111,23 +112,13 @@ const Page = () => {
               </Typography>
 
               <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center items-center gap-2 md:text-2xl rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+                      className="w-full py-2 px-4 inline-flex justify-center items-center gap-2 text-xl rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
                 <FcGoogle style={{ fontSize: '20px' }}/> Login in with Google
               </button>
               <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center items-center md:text-2xl gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                <PiMicrosoftOutlookLogoFill style={{ fontSize: '28px', color: '#0072b1' }}/> Login
-                in with OutLook
-              </button>
-              <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center items-center md:text-2xl gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
+                      className="w-full py-2 px-4 inline-flex justify-center items-center text-xl gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
                 <BsLinkedin style={{ fontSize: '20px', color: '#0072b1' }}/> Login in with
-                Linkedin
-              </button>
-              <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center md:text-2xl items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                <BiLogoInstagramAlt style={{ fontSize: '26px', color: '#FCAF45' }}/> Login in with
-                Instagram
+                Email
               </button>
               <div className="relative py-2">
                 <div className="absolute inset-0 flex items-center">
@@ -217,7 +208,7 @@ const Page = () => {
 
           </div>
           <p className="mb-0 mt-2 pt-1 text-sm md:text-sm text-gray-100">
-            <span>Don't have an account?</span>
+            <span>Dont have an account?</span>
             <Link href={"/auth/register"}>
               <span className="text-white font-bold px-4"> Register</span>
             </Link>
@@ -235,8 +226,8 @@ Page.getLayout = (page) => (
 
 
 <AuthLayout
-  title="Unlock the Power of Automated Email Management"
-  para="with our seamless login experience."
+  title="Login to Email Meetings"
+  para="Get our seamless login experience."
   img="/assets/images/Signin.jpg"
 >
   {page}

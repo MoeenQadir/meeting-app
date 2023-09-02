@@ -66,7 +66,8 @@ export const Layout = (props) => {
             backgroundColor: 'background.paper',
             display: 'flex',
             flexDirection: 'column',
-            position: 'relative'
+            position: 'relative',
+              borderRadius: '1px'
           }}
         >
           {children}
