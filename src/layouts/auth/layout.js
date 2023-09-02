@@ -59,9 +59,7 @@ export const Layout = (props) => {
 
 
         {/*Right */}
-
         <Grid
-
           xs={12}
           lg={6}
           sx={{
@@ -71,12 +69,10 @@ export const Layout = (props) => {
             position: 'relative'
           }}
         >
-
           {children}
         </Grid>
       </Grid>
     </Box>
-
   );
 };
 
