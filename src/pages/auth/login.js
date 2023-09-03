@@ -20,9 +20,8 @@ import {
 import { useAuth } from 'src/hooks/use-auth';
 import { Layout as AuthLayout } from 'src/layouts/auth/layout';
 import { FcGoogle } from 'react-icons/fc';
-import { BiLogoInstagramAlt } from 'react-icons/bi';
-import { PiMicrosoftOutlookLogoFill } from 'react-icons/pi';
-import { BsLinkedin } from 'react-icons/bs';
+import { MdEmail } from 'react-icons/md';
+import { useMediaQuery } from '@mui/material';
 const Page = () => {
   const router = useRouter();
   const auth = useAuth();
@@ -70,7 +69,7 @@ const Page = () => {
     },
     [auth, router]
   );
-
+  const isSmallDevice = useMediaQuery('(max-width:600px)');
   return (
     <>
       <Head>
@@ -81,53 +80,35 @@ const Page = () => {
 
       <Box
         sx={{
-          backgroundColor: '#f5f8ff',
+          backgroundColor: isSmallDevice ? '#4267cf' : '#f5f8ff',
           flex: '1 1 auto',
           alignItems: 'center',
           display: 'flex',
           justifyContent: 'center'
         }}
       >
-        <Card>
-        <Box
-          sx={{
-            maxWidth: 550,
-            px: 3,
-            py: '30px',
-            width: '100%',
-            backgroundColor: '#4267cf'
-          }}
-        >
-          <div>
+        <div className={"w-96 flex items-center justify-center rounded-md"}>
+        <div className=" md:px-3  rounded-md md:py-16 w-full bg-[#4267cf]">
+
+          <div className="px-4">
             <Stack
               spacing={1}
               sx={{ mb: 3 }}
             >
               <div className={"mx-auto"}>
-                <img src="/assets/images/logo.jpg" width={180} />
+                <img src="/assets/images/logo.jpg" width={120} />
               </div>
-              <Typography variant="h4" className="text-center text-white py-2">
+              <Typography variant="h5" className="text-center text-white py-2">
                 Sign In
               </Typography>
 
-              <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center items-center gap-2 md:text-2xl rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                <FcGoogle style={{ fontSize: '20px' }}/> Login in with Google
+              <button
+                className="px-4 py-2 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
+                <FcGoogle style={{ fontSize: '18px' , marginRight: '8px' }}/> Login in with Google
               </button>
-              <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center items-center md:text-2xl gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                <PiMicrosoftOutlookLogoFill style={{ fontSize: '28px', color: '#0072b1' }}/> Login
-                in with OutLook
-              </button>
-              <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center items-center md:text-2xl gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                <BsLinkedin style={{ fontSize: '20px', color: '#0072b1' }}/> Login in with
-                Linkedin
-              </button>
-              <button type="button"
-                      className="w-full py-2 px-4 inline-flex justify-center md:text-2xl items-center gap-2 rounded-md border font-medium bg-white text-gray-700 shadow-sm align-middle hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-white focus:ring-blue-600 transition-all text-sm dark:bg-slate-900 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 dark:hover:text-white dark:focus:ring-offset-gray-800">
-                <BiLogoInstagramAlt style={{ fontSize: '26px', color: '#FCAF45' }}/> Login in with
-                Instagram
+              <button
+                className="px-4 py-2 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
+                <MdEmail style={{ fontSize: '18px' , marginRight: '8px' }}/> Login in with Email
               </button>
               <div className="relative py-2">
                 <div className="absolute inset-0 flex items-center">
@@ -174,7 +155,7 @@ const Page = () => {
                     InputProps={{ style: { color: 'white' } }}
                     InputLabelProps={{ style: { color: 'white' } }}
                   />
-                  <span className={'text-white'}>At least 8 characters and one number</span>
+
                 </Stack>
 
                 {formik.errors.submit && (
@@ -186,19 +167,24 @@ const Page = () => {
                     {formik.errors.submit}
                   </Typography>
                 )}
-                <Button
-                  fullWidth
-                  size="large"
-                  sx={{
-                    mt: 3,
-                    backgroundColor: 'white',
-                    color: 'black',
-                  }}
-                  type="submit"
-                  variant="contained"
-                >
-                  Login
-                </Button>
+                {/*<Button*/}
+                {/*  fullWidth*/}
+                {/*  size="large"*/}
+                {/*  sx={{*/}
+                {/*    mt: 3,*/}
+                {/*    backgroundColor: 'white',*/}
+                {/*    color: 'black',*/}
+                {/*  }}*/}
+                {/*  type="submit"*/}
+                {/*  variant="contained"*/}
+                {/*>*/}
+                {/*  Login*/}
+                {/*</Button>*/}
+                <button
+                  type={"submit"}
+                  className="px-4 py-2 w-full mt-4 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
+                Login
+                </button>
                              </form>
             )}
             {/*{method === 'phoneNumber' && (*/}
@@ -216,15 +202,16 @@ const Page = () => {
             {/*)}*/}
 
           </div>
-          <p className="mb-0 mt-2 pt-1 text-sm md:text-sm text-gray-100">
+
+          <p className=" mt-2 m-4 pt-1 text-sm md:text-sm text-gray-100">
             <span>Don't have an account?</span>
             <Link href={"/auth/register"}>
-              <span className="text-white font-bold px-4"> Register</span>
+              <span className="text-white font-bold px-2">Register</span>
             </Link>
           </p>
 
-        </Box>
-        </Card>
+        </div>
+        </div>
       </Box>
 
     </>
