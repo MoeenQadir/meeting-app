@@ -110,15 +110,15 @@ const Page = () => {
         component="main"
         sx={{
           flexGrow: 1,
-          py: 8
+          py: 2
         }}
       >
         <Container maxWidth="xl">
-          <Stack spacing={3}>
+          <Stack spacing={2}>
             <Stack
               direction="row"
               justifyContent="space-between"
-              spacing={4}
+              spacing={2}
             >
               <Stack spacing={1}>
                 <Typography variant="h4">
@@ -132,7 +132,7 @@ const Page = () => {
                 </Stack>
               </Stack>
               <div className={"flex justify-between items-center w-56 "}>
-                  <TfiReload width={60}/>
+                  <TfiReload size={"30px"}/>
                 <Button
                   variant="contained"
                 >

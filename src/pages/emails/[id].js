@@ -81,7 +81,7 @@ const EmailDetail = ({ emailData }) => (
                             </Stack>
                         </Stack>
                         <div className={"flex justify-between items-center w-56 "}>
-                            <TfiReload width={60}/>
+                            <TfiReload size={"30px"}/>
                             <Button
                                 variant="contained"
                             >

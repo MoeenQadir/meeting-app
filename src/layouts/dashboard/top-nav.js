@@ -73,12 +73,12 @@ export const TopNav = (props) => {
                     <Stack
                         alignItems="center"
                         direction="row"
-                        spacing={2}
+
                     >
                         <Link href="/settings">
                         <Tooltip title="Settings">
-                            <IconButton>
-                                <SvgIcon fontSize="small">
+                          <IconButton >
+                                <SvgIcon sx={{ fontSize: 34 }}>
                                         <CogIcon />
                                 </SvgIcon>
                             </IconButton>
@@ -86,7 +86,7 @@ export const TopNav = (props) => {
                         </Link>
                         <Link href="/faqs">
                         <Tooltip title="FAQ">
-                            <IconButton>
+                          <IconButton sx={{ fontSize: 30 }}>
                                     <AiOutlineQuestionCircle/>
                             </IconButton>
                         </Tooltip>
@@ -97,7 +97,8 @@ export const TopNav = (props) => {
                             sx={{
                                 cursor: 'pointer',
                                 height: 40,
-                                width: 40
+                                width: 40,
+                              marginLeft: 3,
                             }}
                             src="/assets/avatars/avatar-anika-visser.png"
                         />

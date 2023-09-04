@@ -23,7 +23,7 @@ export const CompanyCard = (props) => {
                         pb: 3
                     }}
                 >
-                    <MdOutlineGroupWork width={"2xl"}/>
+                    <MdOutlineGroupWork size={43}/>
                 </Box>
                 <Typography
                     align="center"

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import NextLink from 'next/link';
+import  { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
@@ -17,7 +17,10 @@ import { Layout as AuthLayout } from 'src/layouts/auth/layout';
 import { FcGoogle } from 'react-icons/fc';
 
 import { MdEmail } from 'react-icons/md';
-
+import InputAdornment from '@mui/material/InputAdornment';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Page = () => {
   const router = useRouter();
   const auth = useAuth();
@@ -43,15 +46,54 @@ const Page = () => {
     onSubmit: async (values, helpers) => {
       try {
         await auth.signUp(values.email, values.name, values.password);
-        router.push('/');
+        router.push('/login');
+        toast.success('Successfully Login', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        })
+
       } catch (err) {
+        toast.error('Something went wrong', {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         helpers.setStatus({ success: false });
         helpers.setErrors({ submit: err.message });
         helpers.setSubmitting(false);
+
       }
     }
   });
   const isSmallDevice = useMediaQuery('(max-width:600px)');
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleTogglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  const showToast = () => {
+    toast.success('Successfully Login with email ', {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
   return (
     <>
       <Head>
@@ -87,13 +129,16 @@ const Page = () => {
                 </Typography>
 
                 <button
-                  className="px-4 py-2 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
+                  onClick={showToast}
+                  className="px-4 py-2 w-full mt-4 flex justify-center items-center bg-white hover:bg-blue-200 hover:text-gray-800 text-gray-800 text-sm font-bold rounded-full">
                   <FcGoogle style={{ fontSize: '18px' , marginRight: '8px' }}/> Login in with Google
                 </button>
                 <button
-                  className="px-4 py-2 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
+                  onClick={showToast}
+                  className="px-4 py-2 w-full mt-4 flex justify-center items-center bg-white hover:bg-blue-200 hover:text-gray-800 text-gray-800 text-sm font-bold rounded-full">
                   <MdEmail style={{ fontSize: '18px' , marginRight: '8px' }}/> Login in with Email
                 </button>
+
                 <div className="relative py-2">
                   <div className="absolute inset-0 flex items-center">
                     <div className="w-full border-b border-gray-300"></div>
@@ -143,9 +188,18 @@ const Page = () => {
                     name="password"
                     onBlur={formik.handleBlur}
                     onChange={formik.handleChange}
-                    type="password"
+                    type={showPassword ? 'text' : 'password'} // Toggle between 'text' and 'password' based on showPassword state
                     value={formik.values.password}
-                    InputProps={{ style: { color: 'white' } }}
+                    InputProps={{
+                      style: { color: 'white' },
+                      endAdornment: (
+                        <InputAdornment position="end">
+                          <div onClick={handleTogglePasswordVisibility} style={{ cursor: 'pointer', color: "white" }}>
+                            {showPassword ? <FaEye /> : <FaEyeSlash />}
+                          </div>
+                        </InputAdornment>
+                      ),
+                    }}
                     InputLabelProps={{ style: { color: 'white' } }}
                   />
                 </Stack>
@@ -174,9 +228,10 @@ const Page = () => {
 
                 <button
                   type={"submit"}
-                  className="px-4 py-2 w-full mt-4 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
-                  Login
+                  className="px-4 py-2 w-full mt-4 flex justify-center items-center bg-white hover:bg-blue-200 hover:text-gray-800 text-gray-800 text-sm font-bold rounded-full">
+                  Register
                 </button>
+                <ToastContainer />
               </form>
             </div>
             <p className="mb-0 m-4 mt-2 pt-1 text-sm md:text-sm text-gray-100">
@@ -194,8 +249,8 @@ const Page = () => {
 
 Page.getLayout = (page) => (
   <AuthLayout
-    title="Join Us for Seamless Email Automation – Register Today"
-    para="Streamline your inbox, automate your emails, and stay ahead of the game."
+    title="Automate Your Email"
+    para="Effortless email automation for efficient communication. Get started today!"
     img="/assets/images/login.jpg"
   >
     {page}

@@ -42,11 +42,13 @@ export const SideNav = (props) => {
             href="/"
             sx={{
               display: 'inline-flex',
-              height: 32,
-              width: 32
+              height: 60,
+              width: 160
             }}
           >
-            <Logo />
+
+              <Logo  />
+
           </Box>
         </Box>
         <Box
