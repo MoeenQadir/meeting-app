@@ -4,12 +4,13 @@ import { Box, Typography, Unstable_Grid2 as Grid } from '@mui/material';
 import { Logo } from 'src/components/logo';
 import LottieAnimation from "../../components/LottieAnimation";
 // TODO: Change subtitle text
-
+import { useMediaQuery } from '@mui/material';
 export const Layout = (props) => {
   const { children } = props;
   const title = props.title;
   const img = props.img;
   const para = props.para;
+  const isSmallDevice = useMediaQuery('(max-width:600px)');
   return (
 
 
@@ -30,8 +31,7 @@ export const Layout = (props) => {
         {/*Left */}
 
         <Grid
-
-          xs={12}
+          xs={isSmallDevice ? false : 12}
           lg={6}
           sx={{
             alignItems: 'center',
@@ -45,16 +45,16 @@ export const Layout = (props) => {
             }
           }}
         >
-        <div className={"hidden md:inline"}>
-          <div>
-          <h1 className=" text-center text-4xl"
-          style={{color: "#4267CF"}}>
-            {title}
-          </h1>
-          <p className={"text-gray-900 text-2xl text-center px-12 my-2"}>{para}</p>
+          <div className={"hidden md:inline"}>
+            <div>
+            <h1 className=" text-center text-2xl"
+            style={{color: "#4267CF"}}>
+              {title}
+            </h1>
+            <p className={"text-gray-900 text-xl text-center px-12 my-2"}>{para}</p>
+            </div>
+            <img src={img} width={800} />
           </div>
-          <img src={img} width={800} />
-        </div>
         </Grid>
 
 
