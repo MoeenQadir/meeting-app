@@ -28,14 +28,14 @@ export const SideNavItem = (props) => {
           justifyContent: 'flex-start',
           pl: '16px',
           pr: '16px',
-          py: '6px',
+          py: '10px',
           textAlign: 'left',
-          width: '100%',
+          width: '80%',
           ...(active && {
-            backgroundColor: 'rgba(255, 255, 255, 0.04)'
+            backgroundColor: '#5576d4'
           }),
           '&:hover': {
-            backgroundColor: 'rgba(255, 255, 255, 0.04)'
+            backgroundColor: '#5576d4'
           }
         }}
         {...linkProps}
@@ -50,7 +50,7 @@ export const SideNavItem = (props) => {
               justifyContent: 'center',
               mr: 2,
               ...(active && {
-                color: 'primary.main'
+                color: '#fffff'
               })
             }}
           >
@@ -64,7 +64,7 @@ export const SideNavItem = (props) => {
             flexGrow: 1,
             fontFamily: (theme) => theme.typography.fontFamily,
             fontSize: 14,
-            fontWeight: 600,
+            fontWeight: 400,
             lineHeight: '24px',
             whiteSpace: 'nowrap',
             ...(active && {

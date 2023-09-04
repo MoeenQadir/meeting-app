@@ -7,7 +7,7 @@ import UserPlusIcon from '@heroicons/react/24/solid/UserPlusIcon';
 import UsersIcon from '@heroicons/react/24/solid/UsersIcon';
 import XCircleIcon from '@heroicons/react/24/solid/XCircleIcon';
 import { SvgIcon } from '@mui/material';
-import {MdOutlineForwardToInbox} from "react-icons/md";
+import {MdOutlineForwardToInbox, MdOutlinePaid} from "react-icons/md";
 import {GrGroup} from "react-icons/gr";
 import {TbUsersGroup} from "react-icons/tb";
 import {AiOutlineQuestionCircle} from "react-icons/ai";
@@ -26,7 +26,7 @@ export const items = [
     title: 'Dashboard',
     path: '/',
     icon: (
-      <SvgIcon fontSize="small">
+      <SvgIcon fontSize="medium">
           <MdOutlineForwardToInbox/>
       </SvgIcon>
     )
@@ -35,16 +35,25 @@ export const items = [
     title: 'Meetings',
     path: '/meetings',
     icon: (
-      <SvgIcon fontSize="small">
+      <SvgIcon fontSize="medium">
         <TbUsersGroup color="white" className={"bg-white text-white"}/>
       </SvgIcon>
     )
   },
+    {
+        title: 'Subscriptions',
+        path: '/pricing',
+        icon: (
+            <SvgIcon fontSize="medium">
+                <MdOutlinePaid />
+            </SvgIcon>
+        )
+    },
   {
     title: 'Profile',
     path: '/account',
     icon: (
-      <SvgIcon fontSize="small">
+      <SvgIcon fontSize="medium">
         <UserIcon />
       </SvgIcon>
     )
@@ -53,7 +62,7 @@ export const items = [
         title: 'FAQ',
         path: '/faqs',
         icon: (
-            <SvgIcon fontSize="small">
+            <SvgIcon fontSize="medium">
                 <AiOutlineQuestionCircle/>
             </SvgIcon>
         )
@@ -62,7 +71,7 @@ export const items = [
     title: 'Settings',
     path: '/settings',
     icon: (
-      <SvgIcon fontSize="small">
+      <SvgIcon fontSize="medium">
         <CogIcon />
       </SvgIcon>
     )

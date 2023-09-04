@@ -101,7 +101,6 @@ const Page = () => {
               <Typography variant="h5" className="text-center text-white py-2">
                 Sign In
               </Typography>
-
               <button
                 className="px-4 py-2 flex justify-center items-center bg-gray-50 hover:bg-gray-300 text-gray-800 text-sm font-medium rounded-full">
                 <FcGoogle style={{ fontSize: '18px' , marginRight: '8px' }}/> Login in with Google
@@ -186,22 +185,9 @@ const Page = () => {
                 Login
                 </button>
                              </form>
-            )}
-            {/*{method === 'phoneNumber' && (*/}
-            {/*  <div>*/}
-            {/*    <Typography*/}
-            {/*      sx={{ mb: 1 }}*/}
-            {/*      variant="h6"*/}
-            {/*    >*/}
-            {/*      Not available in the demo*/}
-            {/*    </Typography>*/}
-                {/*<Typography color="text.secondary">*/}
-                {/*  To prevent unnecessary costs we disabled this feature in the demo.*/}
-                {/*</Typography>*/}
-            {/*  </div>*/}
-            {/*)}*/}
 
           </div>
+
 
           <p className=" mt-2 m-4 pt-1 text-sm md:text-sm text-gray-100">
             <span>Don't have an account?</span>
@@ -222,8 +208,8 @@ Page.getLayout = (page) => (
 
 
 <AuthLayout
-  title="Unlock the Power of Automated Email Management"
-  para="with our seamless login experience."
+  title="Login to Email Meetings"
+  para="Get our seamless login experience."
   img="/assets/images/Signin.jpg"
 >
   {page}
